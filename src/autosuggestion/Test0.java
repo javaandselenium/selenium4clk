@@ -23,6 +23,8 @@ public class Test0 {
 		for(WebElement b:ele1) {
 			System.out.println(b.getText());
 		}
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//b[text()='selenium tutorial']")).click();
 		
 		driver.close();
 		
