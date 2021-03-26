@@ -1,4 +1,4 @@
-package screenShot;
+package sceenshots;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,19 +14,16 @@ public class Test0 {
 	public static void main(String[] args) throws IOException {
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://www.facebook.com/");
-		driver.manage().window().maximize();
+		
 		//Typecasting
-		TakesScreenshot ts=(TakesScreenshot) driver;
-//access the method
+		TakesScreenshot ts=(TakesScreenshot)driver;
+		//access the method
 		File src = ts.getScreenshotAs(OutputType.FILE);
-//specify the location
+		//specify location
 		File dest=new File("./photo/fb.png");
-		//copy the photo src to dest
+		//copy file
 		FileUtils.copyFile(src, dest);
-		
 		driver.close();
-		
-	
 	}
 
 }
