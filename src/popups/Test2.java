@@ -18,7 +18,7 @@ public class Test2 {
 		FirefoxOptions f=new FirefoxOptions();
 		f.addArguments("--disable-notifications");
 		
-		WebDriver driver=new FirefoxDriver(f);
+		//WebDriver driver=new FirefoxDriver(f);
 		
 		driver.manage().window().maximize();
 		driver.get("https://www.cleartrip.com/");
